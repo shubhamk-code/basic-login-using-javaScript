@@ -5,7 +5,7 @@ var database = [
     username: "shubham",
     password: "pass123",
   },
-    {
+  {
     username: "aryan",
     password: "pass101",
   },
@@ -34,20 +34,22 @@ var content = [
   },
 ];
 
-
-
 function isUserValid(username, password) {
   for (var i = 0; i < database.length; i++) {
-    if (username === database[i].username && password === database[i].password) {
-    return true;
+    if (
+      username === database[i].username &&
+      password === database[i].password
+    ) {
+      return true;
+    }
   }
-  }
+  return false;
 }
 
 function signIn(username, password) {
-   if (isUserValid(username, password)) {
-     console.log(content);
-   } else {
+  if (isUserValid(username, password)) {
+    console.log(content);
+  } else {
     alert("Please enter correct username and password!");
   }
 }
