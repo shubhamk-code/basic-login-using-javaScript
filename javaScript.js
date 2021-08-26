@@ -34,15 +34,25 @@ var content = [
   },
 ];
 
-var usernamePrompt = prompt("Enter username: ");
-var passwordPrompt = prompt("Enter password: ");
+
+
+function isUserValid(username, password) {
+  for (var i = 0; i < database.length; i++) {
+    if (username === database[i].username && password === database[i].password) {
+    return true;
+  }
+  }
+}
 
 function signIn(username, password) {
-  if (username === database[0].username && password === database[0].password) {
-    console.log(content);
-  } else {
+   if (isUserValid(username, password)) {
+     console.log(content);
+   } else {
     alert("Please enter correct username and password!");
   }
 }
+
+var usernamePrompt = prompt("Enter username: ");
+var passwordPrompt = prompt("Enter password: ");
 
 signIn(usernamePrompt, passwordPrompt);
