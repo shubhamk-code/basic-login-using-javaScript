@@ -5,6 +5,18 @@ var database = [
     username: "shubham",
     password: "pass123",
   },
+    {
+    username: "aryan",
+    password: "pass101",
+  },
+  {
+    username: "akshada",
+    password: "pass102",
+  },
+  {
+    username: "shruti",
+    password: "pass104",
+  },
 ];
 
 var content = [
@@ -15,6 +27,10 @@ var content = [
   {
     username: "Akshada",
     post: "I am learning react",
+  },
+  {
+    username: "Shruti",
+    post: "angular or react?",
   },
 ];
 
